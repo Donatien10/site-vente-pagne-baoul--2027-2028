@@ -1,6 +1,5 @@
-
 /* =========================================
-   BONHEUR PARFAITE - SCRIPT COMPLET
+   SIGNATURE BAOULÉ - SCRIPT COMPLET
    ========================================= */
 
 const PRICE = 18500;
@@ -303,7 +302,7 @@ if (checkout) {
     const total = count * PRICE;
 
     const message = [
-      "Bonjour Bonheur Parfaite, voici ma commande :",
+      "Bonjour Signature Baoulé, voici ma commande :",
       "",
       ...lines,
       "",
@@ -336,7 +335,7 @@ if (orderForm) {
     );
 
     const message = [
-      "Bonjour Bonheur Parfaite, je souhaite commander.",
+      "Bonjour Signature Baoulé, je souhaite commander.",
       `Nom : ${form.get("nom") || ""}`,
       `Téléphone : ${form.get("tel") || ""}`,
       `Collection : ${form.get("collection") || ""}`,

@@ -1,11 +1,10 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bonheur Parfaite : pagnes Baoulé à 18 500 FCFA.">
-  <title>Bonheur Parfaite | Pagnes Baoulé</title>
+  <meta name="description" content="Signature Baoulé : pagnes Baoulé à 18 500 FCFA.">
+  <title>Signature Baoulé | Pagnes Baoulé</title>
   <link rel="stylesheet" href="./style.css">
 
   <style>
@@ -30,7 +29,48 @@
     .card-content {
       padding: 15px;
     }
+
+
+    /* Agrandissement des pagnes au clic */
+    .cloth img,
+    .pagne-image {
+      cursor: zoom-in;
+    }
+
+    .pagne-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.92);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .pagne-lightbox.active {
+      display: flex;
+    }
+
+    .pagne-lightbox img {
+      max-width: 95%;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .pagne-lightbox .close-lightbox {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      color: white;
+      font-size: 38px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
   </style>
+
 </head>
 
 <body>
@@ -38,7 +78,7 @@
 <header>
   <div class="logo"><img src="./image-logo/a891ad55-4508-4513-9609-928f8c7ec109.png" alt=""></div>
   <div>
-    <b>Bonheur Parfaite</b>
+    <b>Signature Baoulé</b>
     <small>Pagnes Baoulé • Élégance & tradition</small>
   </div>
 
@@ -91,19 +131,19 @@
     <img src="./images-premier pagnes/image 5.jpg"
          class="slide" alt="Pagne Baoulé 5">
 
-         <img src="./images-premier pagnes/image 6.jpg"
+    <img src="./images-premier pagnes/image 6.jpg"
          class="slide" alt="Pagne Baoulé 6">
 
-         <img src="./images-premier pagnes/image 7.jpg"
+    <img src="./images-premier pagnes/image 7.jpg"
          class="slide" alt="Pagne Baoulé 7">
 
-         <img src="./images-premier pagnes/image 8.jpg"
+    <img src="./images-premier pagnes/image 8.jpg"
          class="slide" alt="Pagne Baoulé 8">
 
-         <img src="./images-premier pagnes/image 9.jpg"
+    <img src="./images-premier pagnes/image 9.jpg"
          class="slide" alt="Pagne Baoulé 9">
 
-         <img src="./images-premier pagnes/image 10.jpg"
+    <img src="./images-premier pagnes/image 10.jpg"
          class="slide" alt="Pagne Baoulé 10">
   </div>
 </section>
@@ -111,7 +151,7 @@
 
 <section id="collections">
   <p class="eyebrow">Nos sélections</p>
-  <h2>Nos 9 collections de pagnes Baoulé</h2>
+  <h2>Nos collections de pagnes Baoulé</h2>
   <p class="note">Découvrez nos modèles et choisissez votre collection.</p>
 
   <div id="grid" class="grid">
@@ -216,27 +256,15 @@
     </article>
 
     <article class="card">
-      <img class="pagne-image" src="./images-premier pagnes/images9.jpeg"
-           alt="Pagne Baoulé collection 9" loading="lazy">
-      <div class="card-content">
-        <h3>Collection 9</h3>
-        <p>Multicolore</p>
-        <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
-      </div>
-    </article>
-
-<article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images10.jpeg"
            alt="Pagne Baoulé collection 10" loading="lazy">
       <div class="card-content">
         <h3>Collection 10</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="9">Ajouter au panier</button>
       </div>
     </article>
-
 
     <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images11.jpeg"
@@ -245,31 +273,29 @@
         <h3>Collection 11</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="10">Ajouter au panier</button>
       </div>
-    
     </article>
 
-
- <article class="card">
+    <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images12.jpeg"
            alt="Pagne Baoulé collection 12" loading="lazy">
       <div class="card-content">
         <h3>Collection 12</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="11">Ajouter au panier</button>
       </div>
     </article>
 
-     <article class="card">
+    <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images13.jpeg"
            alt="Pagne Baoulé collection 13" loading="lazy">
       <div class="card-content">
         <h3>Collection 13</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="12">Ajouter au panier</button>
       </div>
     </article>
 
@@ -280,10 +306,9 @@
         <h3>Collection 14</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="13">Ajouter au panier</button>
       </div>
     </article>
-
 
     <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images15.jpeg"
@@ -292,10 +317,9 @@
         <h3>Collection 15</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="14">Ajouter au panier</button>
       </div>
     </article>
-
 
     <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images16.jpeg"
@@ -304,7 +328,7 @@
         <h3>Collection 16</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="15">Ajouter au panier</button>
       </div>
     </article>
 
@@ -315,7 +339,7 @@
         <h3>Collection 17</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="16">Ajouter au panier</button>
       </div>
     </article>
 
@@ -326,7 +350,7 @@
         <h3>Collection 18</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="17">Ajouter au panier</button>
       </div>
     </article>
 
@@ -337,10 +361,9 @@
         <h3>Collection 19</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="18">Ajouter au panier</button>
       </div>
     </article>
-
 
     <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images20.jpeg"
@@ -349,10 +372,9 @@
         <h3>Collection 20</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="19">Ajouter au panier</button>
       </div>
     </article>
-
 
     <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images21.jpeg"
@@ -361,7 +383,7 @@
         <h3>Collection 21</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="20">Ajouter au panier</button>
       </div>
     </article>
 
@@ -372,12 +394,9 @@
         <h3>Collection 22</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="21">Ajouter au panier</button>
       </div>
     </article>
-
-    
-
 
     <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images23.jpeg"
@@ -386,11 +405,9 @@
         <h3>Collection 23</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="22">Ajouter au panier</button>
       </div>
     </article>
-
-    
 
     <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images24.jpeg"
@@ -399,11 +416,10 @@
         <h3>Collection 24</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="23">Ajouter au panier</button>
       </div>
     </article>
 
-    
     <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images25.jpeg"
            alt="Pagne Baoulé collection 25" loading="lazy">
@@ -411,11 +427,10 @@
         <h3>Collection 25</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="24">Ajouter au panier</button>
       </div>
     </article>
 
-    
     <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images26.jpeg"
            alt="Pagne Baoulé collection 26" loading="lazy">
@@ -423,11 +438,10 @@
         <h3>Collection 26</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="25">Ajouter au panier</button>
       </div>
     </article>
 
-    
     <article class="card">
       <img class="pagne-image" src="./images-premier pagnes/images27.jpeg"
            alt="Pagne Baoulé collection 27" loading="lazy">
@@ -435,19 +449,9 @@
         <h3>Collection 27</h3>
         <p>Multicolore</p>
         <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
+        <button class="btn" type="button" data-add="26">Ajouter au panier</button>
       </div>
     </article>
-
-  </div>
-</section>
-
-<section id="panier" class="cart-section">
-        <strong>18 500 FCFA</strong>
-        <button class="btn" type="button" data-add="8">Ajouter au panier</button>
-      </div>
-    </article>
-
 
   </div>
 </section>
@@ -532,7 +536,7 @@
 </section>
 
 <section class="contact" id="contact">
-  <h2>Contactez Bonheur Parfaite</h2>
+  <h2>Contactez Signature Baoulé</h2>
   <p>Pour les prix, la disponibilité et la livraison.</p>
   <a class="btn light" href="https://wa.me/225566015174" target="_blank" rel="noopener">WhatsApp 1</a>
   <a class="btn light" href="https://wa.me/225758001824" target="_blank" rel="noopener">WhatsApp 2</a>
@@ -542,10 +546,50 @@
 </main>
 
 <footer>
-  © <span id="year"></span> Bonheur Parfaite ·
+  © <span id="year"></span> Signature Baoulé ·
   <a href="mailto:mfesdona025@gmail.com">mfesdona025@gmail.com</a>
 </footer>
 
 <script src="script.js"></script>
+
+<div class="pagne-lightbox" id="pagneLightbox" role="dialog"
+     aria-modal="true" aria-label="Agrandissement du pagne">
+    <button class="close-lightbox" id="closeLightbox"
+            aria-label="Fermer">&times;</button>
+    <img id="lightboxImage" src="" alt="Pagne Baoulé agrandi">
+</div>
+
+<script>
+const lightbox = document.getElementById("pagneLightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const closeLightbox = document.getElementById("closeLightbox");
+
+document.querySelectorAll(".cloth img, .pagne-image").forEach(img => {
+    img.addEventListener("click", () => {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt || "Pagne Baoulé agrandi";
+        lightbox.classList.add("active");
+    });
+});
+
+function closePagneLightbox() {
+    lightbox.classList.remove("active");
+    lightboxImage.src = "";
+}
+
+closeLightbox.addEventListener("click", closePagneLightbox);
+
+lightbox.addEventListener("click", event => {
+    if (event.target === lightbox) {
+        closePagneLightbox();
+    }
+});
+
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        closePagneLightbox();
+    }
+});
+</script>
 </body>
 </html>
